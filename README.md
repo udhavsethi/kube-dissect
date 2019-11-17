@@ -5,13 +5,15 @@
 2. Run ```sudo ./install.sh```  
 This script will install docker and kubeadm on the machine  
 ## Cluster Setup
-We use SYN cluster as our testing environment.  
+We use SYN cluster as our testing environment.   
+
 | Node     | Role    | Kube Status  |
 | -------- | ------- | ------------ |
 | yellow12 | testing | NA           |
 | yellow13 | Master  | Running      |
 | yellow14 | Slave   | Running      |
-| yellow15 | Slave   | Running      |
+| yellow15 | Slave   | Running      |  
+
 ### To initial master node
 1. Run ```source cluster-up.sh```  
 Note that this script must be run with source otherwise environment cannot be set. This script should be only run on yellow13 once.

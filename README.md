@@ -32,3 +32,12 @@ Ideally we shouldn't need to tear down the cluster
   * ```sudo kubeadm reset```  
 
 ## Deployment Pipeline
+1. Create application and test locally
+2. Create docker image and test locally
+   1. Build image ```docker build -t xiyangf1997/<image name>:<tag> .```
+   2. Run image ```docker run --rm -p <local port>:<docker port> xiyangf1997/<image name>:<tag>```
+3. Push docker to docker hub
+4. Create deployment
+5. Create service
+6. Test
+7. Rolling Upgrade (Alternatively we can delete and redeploy)

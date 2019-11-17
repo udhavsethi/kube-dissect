@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route('/')
 def page():
     return make_response(jsonify({
-        "/": "root info page",
+        "/": "root info page:v1",
         "/ping": "test ping",
         "/loadtest/cpu": "test cpu intensive task",
         "/loadtest/memory": "test memory intensive task"

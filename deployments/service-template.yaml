@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: loadtest
+spec:
+  selector:
+    app: performance-test
+  ports:
+    - protocol: TCP
+      port: 80
+      # application should listen on target port
+      targetPort: 8080
+      # choose a node port from 30000 - 32767
+      # this is the one we access from outside
+      nodePort: 30036
+  type: NodePort

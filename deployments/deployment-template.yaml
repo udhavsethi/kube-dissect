@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  # deployment name
+  name: http-server
+  # deployment labels
+  labels:
+    app: performance-test
+spec:
+  # number of copies of pods
+  replicas: 2
+  selector:
+    # this must match the label in pod template
+    matchLabels:
+      app: performance-test
+  # template for pod configuration
+  template:
+    metadata:
+      # pod label
+      labels:
+        app: performance-test
+    spec:
+      containers:
+      - name: http-server
+        image: docker.io/xiyangf1997/http-server:v1
+        ports:
+        - containerPort: 80

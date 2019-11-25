@@ -3,6 +3,10 @@ from multiprocessing import Pool, cpu_count
 import socket
 import time
 
+
+HOST = "0.0.0.0"
+PORT = "8080"
+
 app = Flask(__name__)
 
 @app.route('/')
@@ -57,4 +61,4 @@ def cpu(cpus):
     return make_response("CPU test finish", 200)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080)
+    app.run(host=HOST, port=PORT)

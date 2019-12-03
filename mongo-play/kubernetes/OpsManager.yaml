@@ -1,0 +1,27 @@
+apiVersion: mongodb.com/v1
+kind: MongoDBOpsManager
+metadata:
+
+  name: <myopsmanager>
+
+  namespace: mongodb
+
+spec:
+
+  replicas: 1
+
+  version: 4.2.0
+
+  adminCredentials: mongodb-pass # Should match metadata.name
+
+                                           # in the Kubernetes secret
+
+                                           # for the admin user
+
+  applicationDatabase:
+
+    members: 3
+
+    version: 4.0.7
+
+    persistent: true

@@ -2,7 +2,7 @@ apiVersion: mongodb.com/v1
 kind: MongoDBOpsManager
 metadata:
 
-  name: <myopsmanager>
+  name: testom
 
   namespace: mongodb
 

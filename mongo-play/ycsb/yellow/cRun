@@ -1,0 +1,25 @@
+mongo client connection created with mongodb://yellow13:31106
+[OVERALL], RunTime(ms), 9452
+[OVERALL], Throughput(ops/sec), 528.9885738468049
+[TOTAL_GCS_G1_Young_Generation], Count, 3
+[TOTAL_GC_TIME_G1_Young_Generation], Time(ms), 29
+[TOTAL_GC_TIME_%_G1_Young_Generation], Time(%), 0.30681337283114685
+[TOTAL_GCS_G1_Old_Generation], Count, 0
+[TOTAL_GC_TIME_G1_Old_Generation], Time(ms), 0
+[TOTAL_GC_TIME_%_G1_Old_Generation], Time(%), 0.0
+[TOTAL_GCs], Count, 3
+[TOTAL_GC_TIME], Time(ms), 29
+[TOTAL_GC_TIME_%], Time(%), 0.30681337283114685
+[READ], Operations, 5000
+[READ], AverageLatency(us), 773.5112
+[READ], MinLatency(us), 364
+[READ], MaxLatency(us), 57119
+[READ], 95thPercentileLatency(us), 985
+[READ], 99thPercentileLatency(us), 1357
+[READ], Return=OK, 5000
+[CLEANUP], Operations, 1
+[CLEANUP], AverageLatency(us), 2165.0
+[CLEANUP], MinLatency(us), 2164
+[CLEANUP], MaxLatency(us), 2165
+[CLEANUP], 95thPercentileLatency(us), 2165
+[CLEANUP], 99thPercentileLatency(us), 2165

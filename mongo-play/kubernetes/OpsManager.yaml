@@ -10,18 +10,18 @@ spec:
 
   replicas: 1
 
-  version: 4.2.0
+  version: 4.2.3
 
   adminCredentials: mongodb-pass # Should match metadata.name
 
                                            # in the Kubernetes secret
 
                                            # for the admin user
-
+  
   applicationDatabase:
 
     members: 3
 
-    version: 4.0.7
+    version: 4.2.0
 
-    persistent: true
+    persistent: false 

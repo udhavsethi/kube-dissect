@@ -1,0 +1,53 @@
+Ping
+
+mean: 0.01145
+10th percentile: 0.011
+90th percentile: 0.012
+
+Memory test - 1 GB
+
+mean: 0.69507
+10th percentile: 0.69
+90th percentile: 0.701
+
+Memory test - 4 GB
+
+mean: 3.47139
+10th percentile: 3.367
+90th percentile: 3.534
+
+Memory test - 8 GB
+
+mean: 7.40396
+10th percentile: 6.714
+90th percentile: 8.476
+
+Memory test - 16 GB
+
+mean: 15.56315
+10th percentile: 13.597
+90th percentile: 17.594
+
+Load test - 1 CPU
+
+mean: 9.45214
+10th percentile: 9.393
+90th percentile: 9.513
+
+Load test - 4 CPU
+
+mean: 9.70003
+10th percentile: 9.656
+90th percentile: 9.732
+
+Load test - 8 CPU
+
+mean: 9.89468
+10th percentile: 9.842
+90th percentile: 9.94
+
+Load test - 12 CPU
+
+mean: 10.0931
+10th percentile: 9.962
+90th percentile: 10.443

@@ -63,10 +63,3 @@ This experiment tests kubernetes performance on ping, cpu intensive task and mem
 * To run memory test ```curl <hostname>:<port>/loadtest/memory/<size>/<time>```
   * size: consume (size)MB of memory. We need to adjust this parameter for different machines
   * time: time to keep the memory unfree 
-
-## TODO
-1. Finish Exp 1 -- this week
-2. Try loadbalancer in service
-3. Explore deploy and service yaml configurations (how to write yaml files) -- this week
-4. MongoDB deploy and play -- this week
-5. Failure injection

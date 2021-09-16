@@ -1,4 +1,4 @@
-# CS754 Kubernetes
+# Kubernetes Dissection and Benchmarking
 
 ## Installation
 1. Disable Ubuntu proxy by commenting the lines in  ```/etc/apt/apt.conf```  
@@ -14,10 +14,10 @@ We use SYN cluster as our testing environment.
 | yellow14 | Slave   | Running      |
 | yellow15 | Slave   | Running      |  
 
-### To initial master node
+### Initializing Master Node
 1. Run ```source cluster-up.sh```  
 Note that this script must be run with source otherwise environment cannot be set. This script should be only run on yellow13 once.
-2. Login docker by ```sudo docker login``` with xiyangf1997 and password
+2. Login docker by ```sudo docker login```, enter credentials
 3. Add docker credentials to kubernetes by ```sudo docker-repo-reg.sh```
 This will allow kubernetes to pull image from docker hub. This script should be only run on yellow13 once.
 ### To join nodes
@@ -52,14 +52,14 @@ Ideally we shouldn't need to tear down the cluster
    3. Rolling upgrade ```kubectl set image deployments/<deployment name> <container name>=<new image>```  
    For upgrading we should only change image tag. If there should be a major change, let's create a new deployment instead.
    
-## Expriment 1: Kubernetes Performance
-This experiment tests kubernetes performance on ping, cpu intensive task and memory intensive task.  
-### Application
-```server.py``` is a python http server that uses flask framework. 8080 is exposed as default access port.  
-* To see routing info: ```curl <hostname>:<port>```
-* To run ping test: ```curl <hostname>:<port>/ping```
-* To run cpu test: ```curl <hostname>:<port>/loadtest/cpu/<cpu-cores>```
-  * cpu-cores: number of cpu cores to run computation intensive task. We should run at maximum cores.
-* To run memory test ```curl <hostname>:<port>/loadtest/memory/<size>/<time>```
-  * size: consume (size)MB of memory. We need to adjust this parameter for different machines
-  * time: time to keep the memory unfree 
+## Performance Benchmarking
+Test kubernetes performance on ping, cpu intensive task and memory intensive tasks.
+
+* Run python http server: ```server.py```. Default access port: 8080
+* See routing info: ```curl <hostname>:<port>```
+* Run ping test: ```curl <hostname>:<port>/ping```
+* Run cpu test: ```curl <hostname>:<port>/loadtest/cpu/<cpu-cores>```
+  * cpu-cores: number of cpu cores to run computation intensive task.
+* Run memory test ```curl <hostname>:<port>/loadtest/memory/<size>/<time>```
+  * size: Memory to be consumed in MBs.
+  * time: Duration for which to occupy the memory.
